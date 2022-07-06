@@ -1,21 +1,22 @@
 body{
-    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
     max-width: 80%;
+    height: 100vh;
     margin: auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.grid {
+.flex{
     width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-.header{ 
-    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    align-items: center;
     height: 10vh;
 }
 
@@ -23,16 +24,16 @@ body{
     height: 100%;
 }
 
-.cta{ 
-    grid-area: 2 / 1 / 3 / 2; 
-    height: 80vh;
+.contenu{
     display: flex;
-    align-items: center;
-    justify-content: left;
+    flex-flow: row wrap;
 }
 
-.cta div{
-    justify-content: space-around;
+.cta{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 80vh;
 }
 
 .cta h1{
@@ -51,33 +52,34 @@ body{
 
 .cta a{
     text-decoration: none;
-    padding: 15px 40px;
     background-color: #0077B6;
+    padding: 15px 40px;
     border-radius: 15px;
     color: white;
     font-weight: 600;
-    transition: all 0.5s ease;
 }
 
 .cta a:hover{
     background-color: #CAF0F8;
     color: #0077B6;
-    
 }
 
-.pic{ 
-    grid-area: 2 / 2 / 3 / 3; 
+.pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
     height: 80vh;
 }
 
 .pic img{
-    height: 100%;
-    display: block;
-    margin: auto;
+    width: 100%;
 }
 
-.footer{ 
-    grid-area: 3 / 1 / 4 / 3;
+.footer{
+    display: flex;
+    align-items: center;
+    width: 100%;
     height: 10vh;
 }
 
@@ -87,9 +89,8 @@ body{
     align-items: center;
 }
 
-.footer div p{
+.footer p{
     margin-right: 10px;
-    font-size: 20px;
 }
 
 .footer img{
